@@ -4,7 +4,7 @@ namespace Sarps\LaravelGUI;
 
 use Illuminate\Support\ServiceProvider;
 
-class LaravelGUIServiceProvider extends ServiceProvider
+class GalaxyServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
