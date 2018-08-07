@@ -1,0 +1,60 @@
+{
+    "name": "sarps/laravel-gui",
+    "type": "library",
+    "description": "admin dashboard for laravel, free version of the laravel nova.",
+    "keywords": [
+        "Sarps",
+        "galaxy",
+        "admin",
+        "dashboard",
+        "nova"
+    ],
+    "homepage": "https://github.com/Sarps/LaravelGUI",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Emmanuel Sarpong",
+            "email": "esarpong51@gmail.com",
+            "homepage": "https://sarps.github.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~5.6|~7.0",
+        "illuminate/support": "~5.1",
+        "yajra/laravel-datatables": "1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : ">=5.4.3",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sarps\\LaravelGUI\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sarps\\LaravelGUI\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "post-install-cmd": [
+            "php artisan vendor:publish --provider=Sarps\\LaravelGUI\\LaravelGUIServiceProvider --tag=public"
+        ],
+        "post-update-cmd": [
+            "php artisan vendor:publish --provider=Sarps\\LaravelGUI\\LaravelGUIServiceProvider --tag=public"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
