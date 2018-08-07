@@ -7,7 +7,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-GUI version of the laravel artisan CLI.
+admin dashboard for laravel, free version of the laravel nova.
 supports PSR-4.
 
 
@@ -16,7 +16,7 @@ supports PSR-4.
 Via Composer
 
 ```bash
-$ composer require Sarps/LaravelGUI
+$ composer require Sarps/Galaxy
 ```
 
 Once Laravel GUI is installed, you need to register a Laravel service provider, in your config/app.php:
@@ -24,7 +24,7 @@ Once Laravel GUI is installed, you need to register a Laravel service provider, 
 ```php
     'providers' => [
 		...
-		Sarps\LaravelGUI\ArtisanGUIServiceProvider::class,
+		Sarps\Galaxy\ArtisanGUIServiceProvider::class,
 	]
 ```
 
@@ -36,12 +36,12 @@ Then publish Laravel GUI's assets(Enter this in the command-line):
 
 ## Usage
 
-That's it, simply navigate to www.yoursite.com/LaravelGUI
+That's it, simply navigate to www.yoursite.com/galaxy
 
 Examples: 
 ```bash
-127.0.0.1:8000/LaravelGUI
-localhost:8000/LaravelGUI
+127.0.0.1:8000/galaxy
+localhost:8000/galaxy
 ```
 
 
